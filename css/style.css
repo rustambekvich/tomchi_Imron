@@ -1,0 +1,268 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-grayful: #222222;
+    --color-grayful-two: #2b2b2b;
+}
+
+header {
+    background: var(--color-grayful-two);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tomchi {
+    position: relative;
+    width: 340px;
+    height: 340px;
+    background: deepskyblue;
+    transform: rotate(45deg) skewX(8deg);
+    transition: all 0.5s;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 2%;
+    box-shadow:
+        0 0 36px 1px deepskyblue,
+        inset 12px 0 12px rgb(8, 175, 231),
+        inset 4px -12px 8px rgb(8, 175, 231),
+        inset -12px 0px 12px rgba(255, 255, 255, 0.4),
+        inset -12px -12px 12px rgb(8, 175, 231);
+    z-index: 2;
+    animation: tomchianime 20s infinite backwards alternate;
+}
+
+
+@keyframes tomchianime {
+    50% {
+        transform: scale(1) rotate(-10deg) translate(50%, -40%);
+    }
+
+    90% {
+        transform: scale(1) rotate(90deg) translate(-40%, 20%);
+    }
+
+    100% {
+        transform: scale(0.9) rotate(45deg) translate(-60%, 40%);
+    }
+}
+
+.eye {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: rgb(73, 73, 73);
+    top: 25%;
+    /* top 35  0 */
+    /* top 56  50 */
+    /* top 50 75 */
+    /* top 35 100 */
+    left: 56%;
+    /* left 56  0*/
+    /* left  28 */
+    /*left 48 75 */
+    /* left 2 100*/
+    /*     box-shadow:
+        0 0 40px 6px white,
+        120px 120px 140px 35px white; */
+    border-radius: 50%;
+    animation: eyeslash 20s infinite backwards alternate 1s;
+    transition: all 0.5s ease-in;
+    transform: rotate(135deg);
+}
+
+@keyframes eyeslash {
+    0% {
+        top: 25%;
+        left: 56%;
+        background: rgb(73, 73, 73);
+
+    }
+
+    12% {
+        background: white;
+
+        top: 25%;
+        left: 56%;
+        box-shadow: 0 0 40px 6px white,
+            -120px -120px 140px 35px white;
+    }
+
+    25% {
+        top: 50%;
+        left: 48%;
+    }
+
+    37% {}
+
+    50% {
+        top: 50%;
+        left: 48%;
+        box-shadow: 0 0 40px 6px white,
+            0px -200px 200px 40px white;
+    }
+
+    75% {
+        top: 56%;
+        left: 28%;
+        background: white;
+        box-shadow: 0 0 40px 6px white,
+            140px -200px 140px 35px white;
+    }
+
+    90% {
+        width: 140px;
+        height: 140px;
+    }
+
+    100% {
+        background: white;
+        box-shadow: 0 0 40px 6px white,
+            140px 380px 300px 50px white;
+        width: 140px;
+        height: 100px;
+        top: 35%;
+        left: 2%;
+    }
+}
+
+.devor {
+    position: absolute;
+    width: 70%;
+    height: 1px;
+    background: var(--color-grayful);
+    background: gray;
+    z-index: 1;
+    bottom: 40%;
+}
+
+.devor::after {
+    content: '';
+    position: absolute;
+    left: -15%;
+    width: 30%;
+    height: 1px;
+    background: var(--color-grayful);
+    background: gray;
+    transform: rotate(-45deg) translateX(-50%);
+}
+
+.devor::before {
+    content: '';
+    position: absolute;
+    right: -15%;
+    width: 30%;
+    height: 1px;
+    background: var(--color-grayful);
+    background: gray;
+    transform: rotate(45deg) translateX(50%);
+}
+
+.tepa {
+    position: absolute;
+    width: 1px;
+    height: 70vh;
+    bottom: 0;
+    left: 0;
+    background: var(--color-grayful);
+    background: gray;
+    z-index: 1;
+    bottom: 40%;
+}
+
+.tepa2 {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 70vh;
+    bottom: 0;
+    right: 0;
+    background: var(--color-grayful);
+    background: gray;
+    z-index: 1;
+    bottom: 40%;
+}
+
+.tomchiTxt {
+    position: absolute;
+    top: 30%;
+    right: 1%;
+    transform: skew(0deg, 45deg);
+    font-size: 60px;
+    text-transform: uppercase;
+    font-family: monospace;
+    color: var(--color-grayful);
+    animation: tomchitxt 8s ease-in-out infinite backwards alternate;
+}
+
+@keyframes tomchitxt {
+
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+        color: silver;
+
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+        color: yellowgreen;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+.tomchiTxt:hover {
+    animation: tomchitxtdark 8s ease-in-out infinite backwards alternate;
+}
+
+@keyframes tomchitxtdark {
+
+    0% {
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 1;
+        color: silver;
+
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 1;
+        color: darkred;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
+
+.tomchiTxt:hover~.tomchi {
+    opacity: 0.2;
+    transition: all 0.5s;
+    filter: invert(1);
+
+}
